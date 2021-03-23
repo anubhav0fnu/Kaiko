@@ -1,0 +1,373 @@
+TensorFlow 2.0 Upgrade Script
+-----------------------------
+Converted 10 files
+Detected 27 issues that require attention
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+File: src/deepnovo_model_training.py
+--------------------------------------------------------------------------------
+src/deepnovo_model_training.py:208:22: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+src/deepnovo_model_training.py:212:21: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+src/deepnovo_model_training.py:217:22: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+src/deepnovo_model_training.py:221:21: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+src/deepnovo_model_training.py:230:23: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+src/deepnovo_model_training.py:234:22: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+--------------------------------------------------------------------------------
+File: src/deepnovo_model.py
+--------------------------------------------------------------------------------
+src/deepnovo_model.py:332:25: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+src/deepnovo_model.py:336:23: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+src/deepnovo_model.py:397:19: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+src/deepnovo_model.py:401:17: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+src/deepnovo_model.py:412:19: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+src/deepnovo_model.py:416:17: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+src/deepnovo_model.py:435:20: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+src/deepnovo_model.py:439:18: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+src/deepnovo_model.py:482:21: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+src/deepnovo_model.py:486:19: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+src/deepnovo_model.py:497:21: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+src/deepnovo_model.py:501:19: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+src/deepnovo_model.py:520:22: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+src/deepnovo_model.py:524:20: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+src/deepnovo_model.py:554:20: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+src/deepnovo_model.py:596:23: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+src/deepnovo_model.py:599:21: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+--------------------------------------------------------------------------------
+File: src/deepnovo_main_modules.py
+--------------------------------------------------------------------------------
+src/deepnovo_main_modules.py:1868:2: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+src/deepnovo_main_modules.py:3507:8: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+src/deepnovo_main_modules.py:4242:8: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+File: src/deepnovo_worker_denovo.py
+--------------------------------------------------------------------------------
+src/deepnovo_worker_denovo.py:179:4: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+================================================================================
+Detailed log follows:
+
+================================================================================
+================================================================================
+Input tree: 'src/'
+================================================================================
+--------------------------------------------------------------------------------
+Processing file 'src/deepnovo_worker_test.py'
+ outputting to 'kaiko2/deepnovo_worker_test.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/deepnovo_worker_io.py'
+ outputting to 'kaiko2/deepnovo_worker_io.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/deepnovo_model_training.py'
+ outputting to 'kaiko2/deepnovo_model_training.py'
+--------------------------------------------------------------------------------
+
+191:22: INFO: Added keywords to args of function 'tf.uniform_unit_scaling_initializer'
+195:22: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+195:22: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+203:22: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+203:22: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+208:22: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+208:22: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+211:22: INFO: Added keywords to args of function 'tf.uniform_unit_scaling_initializer'
+212:21: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+212:21: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+214:49: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+214:49: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+217:22: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+217:22: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+220:22: INFO: Added keywords to args of function 'tf.uniform_unit_scaling_initializer'
+221:21: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+221:21: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+223:49: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+223:49: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+230:23: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+230:23: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+233:22: INFO: Added keywords to args of function 'tf.uniform_unit_scaling_initializer'
+234:22: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+234:22: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+236:50: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+236:50: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+248:20: INFO: Added keywords to args of function 'tf.uniform_unit_scaling_initializer'
+252:20: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+252:20: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+271:22: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+271:22: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+297:28: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+309:22: INFO: Added keywords to args of function 'tf.transpose'
+312:27: INFO: Added keywords to args of function 'tf.nn.conv2d'
+312:27: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+319:27: INFO: Added keywords to args of function 'tf.nn.conv2d'
+319:27: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+324:16: INFO: Added keywords to args of function 'tf.nn.max_pool'
+324:16: INFO: Renamed keyword argument for tf.nn.max_pool from value to input
+324:16: INFO: Renamed 'tf.nn.max_pool' to 'tf.nn.max_pool2d'
+328:16: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+339:19: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+390:22: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+468:20: INFO: Added keywords to args of function 'tf.uniform_unit_scaling_initializer'
+472:20: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+472:20: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+478:20: INFO: Added keywords to args of function 'tf.uniform_unit_scaling_initializer'
+482:20: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+482:20: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+490:20: INFO: Added keywords to args of function 'tf.uniform_unit_scaling_initializer'
+494:20: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+494:20: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+497:23: INFO: Added keywords to args of function 'tf.nn.conv2d'
+497:23: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+503:23: INFO: Added keywords to args of function 'tf.nn.conv2d'
+503:23: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+508:12: INFO: Added keywords to args of function 'tf.nn.max_pool'
+508:12: INFO: Renamed keyword argument for tf.nn.max_pool from value to input
+508:12: INFO: Renamed 'tf.nn.max_pool' to 'tf.nn.max_pool2d'
+512:12: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+517:13: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/deepnovo_worker_db.py'
+ outputting to 'kaiko2/deepnovo_worker_db.py'
+--------------------------------------------------------------------------------
+
+142:14: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/deepnovo_debug.py'
+ outputting to 'kaiko2/deepnovo_debug.py'
+--------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/kaiko_main.py'
+ outputting to 'kaiko2/kaiko_main.py'
+--------------------------------------------------------------------------------
+
+83:2: INFO: Renamed 'tf.app.run' to 'tf.compat.v1.app.run'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/deepnovo_model.py'
+ outputting to 'kaiko2/deepnovo_model.py'
+--------------------------------------------------------------------------------
+
+67:28: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+68:29: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+73:27: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+82:43: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+86:44: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+96:41: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+100:42: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+104:33: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+131:15: INFO: Renamed 'tf.trainable_variables' to 'tf.compat.v1.trainable_variables'
+134:12: INFO: Renamed 'tf.train.AdamOptimizer' to 'tf.compat.v1.train.AdamOptimizer'
+136:20: INFO: Added keywords to args of function 'tf.gradients'
+154:17: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+154:32: INFO: Renamed 'tf.global_variables' to 'tf.compat.v1.global_variables'
+317:11: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+332:25: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+332:25: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+335:24: INFO: Added keywords to args of function 'tf.uniform_unit_scaling_initializer'
+336:23: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+336:23: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+339:24: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+339:24: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+344:18: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+348:13: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+367:18: INFO: Renamed 'tf.log' to 'tf.math.log'
+394:22: INFO: Added keywords to args of function 'tf.transpose'
+397:19: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+397:19: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+400:20: INFO: Added keywords to args of function 'tf.uniform_unit_scaling_initializer'
+401:17: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+401:17: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+404:20: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+404:20: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+405:23: INFO: Added keywords to args of function 'tf.nn.conv2d'
+405:23: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+412:19: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+412:19: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+415:20: INFO: Added keywords to args of function 'tf.uniform_unit_scaling_initializer'
+416:17: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+416:17: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+419:20: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+419:20: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+420:23: INFO: Added keywords to args of function 'tf.nn.conv2d'
+420:23: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+426:12: INFO: Added keywords to args of function 'tf.nn.max_pool'
+426:12: INFO: Renamed keyword argument for tf.nn.max_pool from value to input
+426:12: INFO: Renamed 'tf.nn.max_pool' to 'tf.nn.max_pool2d'
+430:12: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+435:20: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+435:20: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+438:20: INFO: Added keywords to args of function 'tf.uniform_unit_scaling_initializer'
+439:18: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+439:18: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+442:20: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+442:20: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+445:13: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+451:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+476:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+482:21: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+482:21: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+485:22: INFO: Added keywords to args of function 'tf.uniform_unit_scaling_initializer'
+486:19: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+486:19: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+489:22: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+489:22: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+490:25: INFO: Added keywords to args of function 'tf.nn.conv2d'
+490:25: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+497:21: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+497:21: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+500:22: INFO: Added keywords to args of function 'tf.uniform_unit_scaling_initializer'
+501:19: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+501:19: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+504:22: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+504:22: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+505:25: INFO: Added keywords to args of function 'tf.nn.conv2d'
+505:25: INFO: Renamed keyword argument for tf.nn.conv2d from filter to filters
+511:14: INFO: Added keywords to args of function 'tf.nn.max_pool'
+511:14: INFO: Renamed keyword argument for tf.nn.max_pool from value to input
+511:14: INFO: Renamed 'tf.nn.max_pool' to 'tf.nn.max_pool2d'
+515:14: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+520:22: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+520:22: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+523:22: INFO: Added keywords to args of function 'tf.uniform_unit_scaling_initializer'
+524:20: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+524:20: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+527:22: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+527:22: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+530:15: INFO: Changing keep_prob arg of tf.nn.dropout to rate, and recomputing value.
+
+551:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+554:20: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+554:20: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+586:13: INFO: Renamed 'tf.nn.rnn_cell.MultiRNNCell' to 'tf.compat.v1.nn.rnn_cell.MultiRNNCell'
+594:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+596:23: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+596:23: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+599:21: WARNING: tf.get_variable requires manual check. tf.get_variable returns ResourceVariables by default in 2.0, which have well-defined semantics and are stricter about shapes. You can disable this behavior by passing use_resource=False, or by calling tf.compat.v1.disable_resource_variables().
+599:21: INFO: Renamed 'tf.get_variable' to 'tf.compat.v1.get_variable'
+602:22: INFO: tf.constant_initializer requires manual check. Initializers no longer have the dtype argument in the constructor or partition_info argument in the __call__ method.
+The calls have been converted to compat.v1 for safety (even though they may already have been correct).
+602:22: INFO: Renamed 'tf.constant_initializer' to 'tf.compat.v1.constant_initializer'
+610:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+630:9: INFO: Renamed 'tf.variable_scope' to 'tf.compat.v1.variable_scope'
+668:34: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+673:35: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+679:37: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+682:36: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+688:31: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+691:31: INFO: Renamed 'tf.placeholder' to 'tf.compat.v1.placeholder'
+733:12: INFO: Renamed 'tf.train.Saver' to 'tf.compat.v1.train.Saver'
+733:27: INFO: Renamed 'tf.global_variables' to 'tf.compat.v1.global_variables'
+736:16: INFO: Renamed 'tf.gfile.Exists' to 'tf.io.gfile.exists'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/deepnovo_main_modules.py'
+ outputting to 'kaiko2/deepnovo_main_modules.py'
+--------------------------------------------------------------------------------
+
+1868:2: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+1974:14: INFO: Renamed 'tf.gfile.Exists' to 'tf.io.gfile.exists'
+1981:16: INFO: Renamed 'tf.global_variables_initializer' to 'tf.compat.v1.global_variables_initializer'
+2889:7: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+3029:7: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+3507:8: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+3575:7: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+3686:7: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+3802:2: INFO: Renamed 'tf.reset_default_graph' to 'tf.compat.v1.reset_default_graph'
+3803:7: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+3924:7: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+4242:8: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+4321:7: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/deepnovo_worker_denovo.py'
+ outputting to 'kaiko2/deepnovo_worker_denovo.py'
+--------------------------------------------------------------------------------
+
+97:14: INFO: Renamed 'tf.Session' to 'tf.compat.v1.Session'
+179:4: WARNING: *.save requires manual check. (This warning is only applicable if the code saves a tf.Keras model) Keras model.save now saves to the Tensorflow SavedModel format by default, instead of HDF5. To continue saving to HDF5, add the argument save_format='h5' to the save() function.
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+Processing file 'src/deepnovo_config.py'
+ outputting to 'kaiko2/deepnovo_config.py'
+--------------------------------------------------------------------------------
+
+21:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+25:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+29:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+33:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+37:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+41:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+45:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+49:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+53:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+60:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+64:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+68:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+72:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+84:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+87:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+90:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+93:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+96:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+99:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+102:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+105:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+108:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+111:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+114:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+121:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+125:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+129:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+133:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+137:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+141:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+145:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+149:0: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+153:8: INFO: Renamed 'tf.app.flags' to 'tf.compat.v1.app.flags'
+--------------------------------------------------------------------------------
+
