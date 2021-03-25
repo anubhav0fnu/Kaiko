@@ -302,7 +302,7 @@ mass_AA = {'_PAD': 0.0,
 #            'V': 99.06841, # 19
 #           }
 
-mass_ID = [mass_AA[vocab_reverse[x]] for x in xrange(vocab_size)]
+mass_ID = [mass_AA[vocab_reverse[x]] for x in range(vocab_size)]
 mass_ID_np = np.array(mass_ID, dtype=np.float32)
 
 mass_AA_min = mass_AA["G"] # 57.02146
@@ -551,6 +551,8 @@ valid_index = [216, 217, 218, 219]
 lastindex = FLAGS.lastindex
 # lastindex = 17 ## 234
 input_files_train = [i for i in range(lastindex+1) if i not in valid_index]
+
+valid_index = [2]
 input_files_valid = valid_index
 # input_files_train = [i for i in range(18)]
 # input_files_valid = [i+18 for i in range(20)]

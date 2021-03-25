@@ -1,0 +1,11 @@
+FROM tensorflow/tensorflow:2.4.1
+RUN apt-get update \
+    && apt-get install --no-install-recommends --yes git
+
+RUN pip install --upgrade pip \
+    && pip install Bio==0.4.1 \
+    && pip install pyteomics==4.4.1 \
+    && pip install numba==0.53.0 \
+    && pip install sigopt==7.3.0 \
+    && pip install pandas==1.1.5
+

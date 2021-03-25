@@ -147,11 +147,11 @@ class WorkerDenovo(object):
                                dtype=bool)
 
     # fill up the knapsack_matrix by rows and columns, using dynamic programming
-    for AAid in xrange(3, self.vocab_size): # excluding PAD, GO, EOS
+    for AAid in range(3, self.vocab_size): # excluding PAD, GO, EOS
 
       mass_AA = int(round(self.mass_ID[AAid] * self.KNAPSACK_AA_RESOLUTION))
 
-      for col in xrange(max_mass_upperbound):
+      for col in range(max_mass_upperbound):
   
         # col 0 ~ mass 1
         # col + 1 = mass
@@ -220,7 +220,7 @@ class WorkerDenovo(object):
     #   path["score_list"]
     #   path["score_sum"]
     spectrum_batch_size = len(spectrum_batch)
-    top_path_batch = [[] for x in xrange(spectrum_batch_size)]
+    top_path_batch = [[] for x in range(spectrum_batch_size)]
 
     # forward/backward direction setting
     #   the direction determines the model, the spectrum and the peak mass
@@ -272,7 +272,7 @@ class WorkerDenovo(object):
     #     path["c_state"]
     #     path["h_state"]
     active_search_list = []
-    for spectrum_id in xrange(spectrum_batch_size):
+    for spectrum_id in range(spectrum_batch_size):
       search_entry = {}
       search_entry["spectrum_id"] = spectrum_id
       path = {}
@@ -418,7 +418,7 @@ class WorkerDenovo(object):
 
         # find all possible new paths within knapsack filter
         new_path_list = []
-        for index in xrange(block_index, block_index + search_entry_size[entry_index]):
+        for index in range(block_index, block_index + search_entry_size[entry_index]):
           for AAid in block_knapsack_candidate[index]:
             new_path = {}
             new_path["AAid_list"] = block_AAid_list[index] + [AAid]
@@ -442,7 +442,7 @@ class WorkerDenovo(object):
           new_path_score = np.array([x["score_sum"] for x in new_path_list])
           top_k_index = np.argpartition(-new_path_score, self.beam_size)[:self.beam_size] # pylint: disable=line-too-long
           search_entry["current_path_list"] = [new_path_list[top_k_index[x]]
-                                               for x in xrange(self.beam_size)]
+                                               for x in range(self.beam_size)]
         else:
           search_entry["current_path_list"] = new_path_list
   
@@ -496,7 +496,7 @@ class WorkerDenovo(object):
     #   candidate["sequence"]
     #   candidate["position_score"]
     #   candidate["score"]
-    top_candidate_batch = [[] for x in xrange(spectrum_batch_size)]
+    top_candidate_batch = [[] for x in range(spectrum_batch_size)]
     for peak_batch in peak_list:
 
       forward_path_batch = self._extend_peak("forward",
@@ -511,7 +511,7 @@ class WorkerDenovo(object):
                                               peak_batch)
 
       # concatenate forward and backward paths
-      for spectrum_id in xrange(spectrum_batch_size):
+      for spectrum_id in range(spectrum_batch_size):
         if ((not forward_path_batch[spectrum_id])
             or (not backward_path_batch[spectrum_id])): # any list is empty
           continue
@@ -639,7 +639,7 @@ class WorkerDenovo(object):
     mass_tolerance = 1./self.SPECTRUM_RESOLUTION
 
     # add middle peaks and their complements to peak_list
-    for index in xrange(self.num_position):
+    for index in range(self.num_position):
 
       # treat the peak as a b-ion, so it corresponds to a prefix, and its
       #   complement y-ion corresponds to a suffix
@@ -686,8 +686,8 @@ class WorkerDenovo(object):
 
     # refine/filter predicted sequences by precursor mass,
     #   especially for middle peak extension
-    refine_batch = [[] for x in xrange(spectrum_batch_size)]
-    for spectrum_id in xrange(spectrum_batch_size):
+    refine_batch = [[] for x in range(spectrum_batch_size)]
+    for spectrum_id in range(spectrum_batch_size):
       precursor_mass = spectrum_batch[spectrum_id]["precursor_mass"]
       candidate_list = top_candidate_batch[spectrum_id]
       for candidate in candidate_list:
@@ -698,8 +698,8 @@ class WorkerDenovo(object):
           refine_batch[spectrum_id].append(candidate)
 
     # select the best len-normalized scoring candidate
-    predicted_batch = [[] for x in xrange(spectrum_batch_size)]
-    for spectrum_id in xrange(spectrum_batch_size):
+    predicted_batch = [[] for x in range(spectrum_batch_size)]
+    for spectrum_id in range(spectrum_batch_size):
 
       predicted_batch[spectrum_id] = {}
       predicted_batch[spectrum_id]["scan"] = spectrum_batch[spectrum_id]["scan"]

@@ -33,7 +33,7 @@ from __future__ import print_function
 import sys
 
 import numpy as np
-from six.moves import xrange  # pylint: disable=redefined-builtin
+from six.moves import range  # pylint: disable=redefined-builtin
 
 import tensorflow as tf
 from tensorflow.python.framework import ops
@@ -78,7 +78,7 @@ class TrainingModel(object):
     # candidate intensity
     self.intensity_inputs_forward = []
     self.intensity_inputs_backward = []
-    for x in xrange(deepnovo_config._buckets[-1]): # TODO(nh2tran): _buckets
+    for x in range(deepnovo_config._buckets[-1]): # TODO(nh2tran): _buckets
       self.intensity_inputs_forward.append(tf.compat.v1.placeholder(
           dtype=self.ftype,
           shape=[None, deepnovo_config.vocab_size, deepnovo_config.num_ion, deepnovo_config.WINDOW_SIZE], # TODO(nh2tran): line-too-long, config
@@ -92,7 +92,7 @@ class TrainingModel(object):
     self.decoder_inputs_forward = []
     self.decoder_inputs_backward = []
     self.target_weights = []
-    for x in xrange(deepnovo_config._buckets[-1] + 1): # TODO(nh2tran): _buckets
+    for x in range(deepnovo_config._buckets[-1] + 1): # TODO(nh2tran): _buckets
       self.decoder_inputs_forward.append(tf.compat.v1.placeholder(
           dtype=tf.int32,
           shape=[None],
@@ -108,9 +108,9 @@ class TrainingModel(object):
 
     # Our targets are decoder inputs shifted by one.
     self.targets_forward = [self.decoder_inputs_forward[x + 1]
-                            for x in xrange(len(self.decoder_inputs_forward) - 1)] # TODO(nh2tran): line-too-long
+                            for x in range(len(self.decoder_inputs_forward) - 1)] # TODO(nh2tran): line-too-long
     self.targets_backward = [self.decoder_inputs_backward[x + 1]
-                             for x in xrange(len(self.decoder_inputs_backward) - 1)] # TODO(nh2tran): line-too-long
+                             for x in range(len(self.decoder_inputs_backward) - 1)] # TODO(nh2tran): line-too-long
 
     # OUTPUTS and LOSSES
     (self.outputs_forward,
@@ -132,7 +132,7 @@ class TrainingModel(object):
       self.gradient_norms = []
       self.updates = []
       opt = tf.compat.v1.train.AdamOptimizer(learning_rate=deepnovo_config.learning_rate)
-      for b in xrange(len(deepnovo_config._buckets)): # TODO(nh2tran): _buckets
+      for b in range(len(deepnovo_config._buckets)): # TODO(nh2tran): _buckets
         gradients = tf.gradients(ys=self.losses[b], xs=params)
         clipped_gradients, norm = tf.clip_by_global_norm(
             gradients,
@@ -145,7 +145,7 @@ class TrainingModel(object):
       # for TensorBoard
       #~ self.train_writer = tf.train.SummaryWriter(deepnovo_config.FLAGS.train_dir, session.graph)
       #~ self.loss_summaries = [tf.scalar_summary("losses_" + str(b), self.losses[b])
-                             #~ for b in xrange(len(deepnovo_config._buckets))]
+                             #~ for b in range(len(deepnovo_config._buckets))]
       #~ dense1_W_penalty = tf.get_default_graph().get_tensor_by_name(
                          #~ "model_with_buckets/embedding_rnn_seq2seq/embedding_rnn_decoder/rnn_decoder_forward/dense1_W_penalty:0")
       #~ self.dense1_W_penalty_summary = tf.scalar_summary("dense1_W_penalty_summary", dense1_W_penalty)
@@ -174,7 +174,7 @@ class TrainingModel(object):
 
     # Input feed forward
     if deepnovo_config.FLAGS.direction == 0 or deepnovo_config.FLAGS.direction == 2:
-      for x in xrange(decoder_size):
+      for x in range(decoder_size):
         input_feed[self.intensity_inputs_forward[x].name] = intensity_inputs_forward[x] # TODO(nh2tran): line-too-long
         input_feed[self.decoder_inputs_forward[x].name] = decoder_inputs_forward[x] # TODO(nh2tran): line-too-long
       # Since our targets are decoder inputs shifted by one, we need one more.
@@ -184,7 +184,7 @@ class TrainingModel(object):
 
     # Input feed backward
     if deepnovo_config.FLAGS.direction == 1 or deepnovo_config.FLAGS.direction == 2:
-      for x in xrange(decoder_size):
+      for x in range(decoder_size):
         input_feed[self.intensity_inputs_backward[x].name] = intensity_inputs_backward[x] # TODO(nh2tran): line-too-long
         input_feed[self.decoder_inputs_backward[x].name] = decoder_inputs_backward[x] # TODO(nh2tran): line-too-long
       # Since our targets are decoder inputs shifted by one, we need one more.
@@ -193,7 +193,7 @@ class TrainingModel(object):
                                                   dtype=np.int32)
 
     # Input feed target weights
-    for x in xrange(decoder_size):
+    for x in range(decoder_size):
       input_feed[self.target_weights[x].name] = target_weights[x]
 
     # keeping probability for dropout layers
@@ -214,12 +214,12 @@ class TrainingModel(object):
 
     # Output forward logits
     if deepnovo_config.FLAGS.direction == 0 or deepnovo_config.FLAGS.direction == 2:
-      for x in xrange(decoder_size):
+      for x in range(decoder_size):
         output_feed.append(self.outputs_forward[bucket_id][x])
 
     # Output backward logits
     if deepnovo_config.FLAGS.direction == 1 or deepnovo_config.FLAGS.direction == 2:
-      for x in xrange(decoder_size):
+      for x in range(decoder_size):
         output_feed.append(self.outputs_backward[bucket_id][x])
 
     # RUN
